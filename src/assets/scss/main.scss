@@ -1,0 +1,41 @@
+// if you stupid autist, you will turn it on
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// Do not touch
+html,
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+//main content wrapper
+.wrapper {
+  margin-top: 10rem;
+
+  @media (max-width: 1200px) {
+    margin-top: 11rem;
+  }
+}

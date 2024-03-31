@@ -1,0 +1,87 @@
+@import "/src/assets/scss/colors.scss";
+
+.card {
+  min-height: 620px;
+  background: $grad;
+  border: none;
+  margin: 40px;
+}
+.card__info__wrapper {
+  width: 66%;
+  height: 66%;
+  @media (max-width: 550px) {
+    width: 90%;
+    height: 90%;
+  }
+}
+.card__info {
+  width: 50%;
+  height: 100%;
+  @media (max-width: 550px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    // font-family: "Open Sans ";
+    font-size: 67px;
+    font-weight: 700;
+    @media (max-width: 900px) {
+      font-size: 47px;
+    }
+  }
+
+  &__description {
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 400;
+    @media (max-width: 900px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.card__info__form {
+  background-color: $white;
+  border: none;
+}
+
+.info__form {
+  &__input {
+    font-family: "Open Sans ";
+    font-size: 18px;
+    font-weight: 400;
+    outline: none !important;
+    padding-left: 1rem;
+
+    width: 18rem;
+    height: 4rem;
+    @media (max-width: 550px) {
+      width: 150px;
+    }
+  }
+  &__btn {
+    height: max-content;
+    font-family: "Open Sans ";
+    font-size: 20px;
+    font-weight: 400;
+    outline: none !important;
+
+    background-color: $blue-accent;
+    color: $white;
+    width: 11rem;
+    height: 4rem;
+    transition: 0.4s ease;
+    @media (max-width: 550px) {
+      width: 120px;
+    }
+    &:hover {
+      transform: scale(1.02);
+
+      background-color: $blue;
+      color: $white;
+    }
+  }
+}

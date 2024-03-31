@@ -1,0 +1,38 @@
+.news-list {
+    padding: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+// font-family: "Mak Light";
+//    font-family: "Open Sans";
+.news {
+    border-radius: 12px;
+    box-shadow: 0 0 10px 0 #ccc;
+    padding: 40px;
+    transition: .2s all;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    &__meta {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+    
+    &__content {
+        margin-bottom: 20px;
+    }
+
+    &__time {
+        color: #aaa;
+    }
+
+}

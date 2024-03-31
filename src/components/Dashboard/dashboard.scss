@@ -1,0 +1,231 @@
+@import "/src/assets/scss/colors.scss";
+
+.sidebar {
+  width: max-content;
+  max-width: 260px;
+  min-height: 80vh;
+  background-color: $white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  margin-left: 2rem;
+  overflow: hidden;
+
+  -webkit-animation: text-shadow-drop-center 0.6s both;
+  animation: text-shadow-drop-center 0.6s both;
+  @media (max-width: 550px) {
+    min-height: max-content;
+    width: max-content;
+  }
+  &-wrapper {
+    // @media (max-width:550px) {
+    //   display: flex;
+    //   width: 300px;
+    //   flex-direction: row;
+    //   align-items: center;
+    //   justify-content: space-between;
+
+    //   }
+  }
+}
+
+.nav__element button {
+  transition: 0.3s ease;
+
+  padding-left: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  width: 100%;
+  background-color: $white;
+  height: 60px;
+  padding: 5px;
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 24px;
+  font-optical-sizing: auto;
+  position: relative;
+
+  & span {
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      display: block;
+      width: 0;
+      height: 2px;
+      background: $blue-accent;
+      transition: 0.3s;
+    }
+    &:after {
+      left: 47%;
+      transform: translate(-47%);
+    }
+    &:hover:after {
+      width: 94%;
+    }
+  }
+}
+
+.nav__element button:active {
+  background-color: $blue-accent;
+  color: $white;
+}
+.sidebar .active > button {
+  background-color: $blue-accent;
+  color: $white;
+
+  /* Add other styles if desired */
+}
+
+.current_team__add,
+.current_team__delete {
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px 0 #ccc;
+  height: 100%;
+}
+
+.current_team {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.dashboard__edit {
+  border-radius: 16px;
+  margin-right: 2rem;
+  margin-left: 0.5rem;
+
+  min-height: 80vh;
+  // background-color: $blue-verysoft;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+
+  @media (max-width: 550px) {
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@-webkit-keyframes text-shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes text-shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.dashboard__team__title {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.team__edit {
+  height: 100%;
+  @media (max-width: 900px) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.current_team {
+  height: 100%;
+  @media (max-width: 550px) {
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__add {
+    @media (max-width: 550px) {
+      width: 380px;
+    }
+  }
+  &__delete {
+    @media (max-width: 550px) {
+      width: 380px;
+    }
+  }
+}
+
+.dashboard {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 40px;
+  input {
+    font-family: "Open Sans";
+    font-size: 24px;
+  }
+
+  @media (max-width: 1200px) {
+    margin-top: 15rem;
+  }
+  @media (max-width: 1300px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.add__block-wrapper {
+  input {
+    width: 300px;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #cecece;
+    background: $white;
+    border-radius: 8px;
+  }
+  input {
+    font-family: "Open Sans";
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+
+.add__block__title {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.add__subimt {
+  border-radius: 1rem;
+  border: 1px solid $blue-accent;
+  background-color: $white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-weight: 500;
+  font-size: 18px;
+  color: $black;
+  transition: 0.1s ease-in;
+  margin-top: 2rem;
+  font-family: "Open Sans";
+  font-size: 18px;
+  &:hover {
+    background-color: $blue-accent;
+    color: $white;
+    border: 1px solid black;
+  }
+}

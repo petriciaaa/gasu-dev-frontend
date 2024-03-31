@@ -1,0 +1,44 @@
+@import "/src/assets/scss/colors.scss";
+
+.form-wrapper {
+  form {
+    font-family: "Open Sans";
+  }
+}
+
+.form-reg {
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 1px 2px solid $gray-soft;
+  border: 1px solid $gray-soft;
+  border-width: 1px;
+}
+
+.submit__btn {
+  font-family: "Open Sans";
+  color: $black-soft;
+}
+
+.form-annotation {
+  button {
+    border-radius: 1rem;
+    border: 1px solid $blue-accent;
+    background-color: $white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    font-weight: 500;
+    font-size: 18px;
+    color: $black;
+    transition: 0.1s ease-in;
+    margin-top: 2rem;
+    font-family: "Open Sans";
+    font-size: 18px;
+    &:hover {
+      background-color: $blue-accent;
+      color: $white;
+      border: 1px solid black;
+    }
+  }
+}

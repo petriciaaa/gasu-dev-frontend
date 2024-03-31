@@ -1,0 +1,81 @@
+@import "/src/assets/scss/colors.scss";
+.projects {
+  min-height: 24rem;
+  width: 100%;
+
+  &-wrapper {
+    width: 91.66%;
+    min-height: 24rem;
+    @media (max-width: 600px) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__name {
+    font-family: "Open Sans";
+    font-size: 22px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+  }
+}
+.projects__nav {
+  width: 100%;
+  &__title {
+    font-family: "Open Sans Condensed";
+    font-size: 50px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+  }
+}
+.swiper {
+  width: 100%;
+  padding: 20px 0;
+}
+
+// item
+
+.project__item {
+  min-width: 27.9375rem;
+  min-height: 25.75rem;
+  padding: 1rem;
+  @media (max-width: 600px) {
+    padding: 0rem;
+    margin-bottom: 10px;
+  }
+  &__img {
+    max-width: 50%;
+    height: 50%;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    font-family: "Open Sans";
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 19px;
+  }
+  &__description {
+    font-family: "Open Sans Condensed";
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    text-align: start;
+    word-wrap: break-word;
+
+    &-wrapper {
+      width: 90%;
+      min-height: 2rem;
+      @media (max-width: 600px) {
+        display: flex;
+        max-width: 600px;
+
+        max-height: 300px;
+      }
+    }
+  }
+}
