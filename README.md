@@ -15,3 +15,33 @@
 
 # Использльзование
 Логин и пароль для входа в систему администрирования: Логин:admin Пароль:root .
+
+### Описание приложения:
+**Страницы:**
+- Главная страница
+- Состав студсовета
+- Профиль
+- Админ панель
+- Контакты и катра
+- Новости
+
+
+**Frontend:**
+- React 18
+- TypeScript
+- JavaScript
+- React Router 6
+- Redux 
+- Webpack
+- Style (SCSS, Tailwind)
+- mui, react-bootstrap
+
+
+
+**Backend:**
+- Laravel 11
+- PHP 8.3
+- beget -for host
+- reg.ru -for domains
+
+-[end points here](https://www.postman.com/Laptev/workspace/a47fc7a6-f4cf-4f2b-a221-2ec0aa993c40/share?collection=14951197-00cffd48-2617-465d-9f70-d7081d57cc73&target=embed)
