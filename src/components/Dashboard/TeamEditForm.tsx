@@ -3,10 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 //Do not forget to use useEffect hook!
 const TeamEditForm: React.FC = () => {
-  // const news = await fetch('http://localhost:8000/api/news', )
-  // fetch("http://localhost:8000/api/team")
-  // .then(resp=>resp.json())
-  // .then(res=>console.log(res))
   const teamInfo = useSelector<any, any>((state) => state.teamReducer);
   const dispatch = useDispatch();
 
@@ -51,7 +47,7 @@ const TeamEditForm: React.FC = () => {
       var reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = async function () {
-        const resp = await fetch("http://elapteb8.beget.tech/api/team", {
+        const resp = await fetch("https://gasudev.ru/api/team", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -84,7 +80,7 @@ const TeamEditForm: React.FC = () => {
     const jsonData = JSON.stringify({ fullname });
 
     try {
-      const response = await fetch("http://elapteb8.beget.tech/api/team/0", {
+      const response = await fetch("https://gasudev.ru/api/team/0", {
         headers: { "Content-Type": "application/json" },
         method: "DELETE",
         body: JSON.stringify({

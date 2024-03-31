@@ -21,7 +21,7 @@ const TeamList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://elapteb8.beget.tech/api/team")
+    fetch("https://gasudev.ru/api/team")
       .then((resp) => resp.json())
       .then((data) => {
         setLoading(false);

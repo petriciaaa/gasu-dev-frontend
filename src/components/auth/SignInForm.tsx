@@ -63,7 +63,7 @@ const SignInForm = (props: IPropsLoginForm) => {
       password: passswordInputRef.current.value,
     };
 
-    await fetch("http://elapteb8.beget.tech/api/login", {
+    await fetch("https://gasudev.ru/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

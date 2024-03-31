@@ -48,7 +48,7 @@ const Projects = () => {
             <Swiper
               // install Swiper modules
               modules={[Navigation, Scrollbar, A11y, Autoplay]}
-              spaceBetween={20}
+              spaceBetween={200}
               slidesPerView={slidesPerView}
               // navigation
               pagination={{ clickable: true }}

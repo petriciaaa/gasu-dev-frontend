@@ -61,19 +61,16 @@ const ProfileInfo = () => {
     if (validatedFieldsCounter === Object.keys(currentUserNewIfo).length) {
       const user = JSON.parse(localStorage.getItem("currentUser"));
 
-      const resp = await fetch(
-        `http://elapteb8.beget.tech/api/users/${user.id}`,
-        {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            username: currentUserNewIfo.username,
-            name: currentUserNewIfo.name,
-            surname: currentUserNewIfo.surname,
-            password: currentUserNewIfo.password,
-          }),
-        }
-      ).then((resp) => resp.json());
+      const resp = await fetch(`https://gasudev.ru/api/users/${user.id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: currentUserNewIfo.username,
+          name: currentUserNewIfo.name,
+          surname: currentUserNewIfo.surname,
+          password: currentUserNewIfo.password,
+        }),
+      }).then((resp) => resp.json());
       const action = { type: "CHANGE-USER-INFO", payload: currentUserNewIfo };
       localStorage.setItem("currentUser", JSON.stringify(currentUserNewIfo));
       dispatch(action);

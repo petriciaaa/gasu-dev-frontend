@@ -10,7 +10,7 @@ const NewsList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://elapteb8.beget.tech/api/news")
+    fetch("https://gasudev.ru/api/news")
       .then((resp) => resp.json())
       .then((data) => {
         setLoading(false);

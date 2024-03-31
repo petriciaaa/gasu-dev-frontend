@@ -139,7 +139,7 @@ const Header: React.FC = () => {
               Главная
             </NavLink>
             <NavLink
-              to={"/about"}
+              to={"/team"}
               className="header__nav__element link  flex  items-center justify-center"
             >
               {" "}

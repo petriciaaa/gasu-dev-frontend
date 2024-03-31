@@ -7,8 +7,6 @@ import "./news-edit.scss";
 
 //Do not forget to use useEffect hook!
 const UsersEditForm: React.FC = () => {
-  // const users = await fetch('http://localhost:8000/api/users', )
-
   const changeRole = (user, event) => {
     const roles = {
       admin: 1,
@@ -16,7 +14,7 @@ const UsersEditForm: React.FC = () => {
       user: 3,
     };
 
-    fetch(`http://localhost:8000/api/users/${user.id}`, {
+    fetch(`https://gasudev.ru/api/users/${user.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -26,7 +24,7 @@ const UsersEditForm: React.FC = () => {
   };
 
   const deleteUser = (user, event) => {
-    fetch(`http://elapteb8.beget.tech/api/users/${user.id}`, {
+    fetch(`https://gasudev.ru/api/users/${user.id}`, {
       method: "DELETE",
     }).then((data) => window.location.reload());
   };
@@ -34,7 +32,7 @@ const UsersEditForm: React.FC = () => {
   const [users, setUsers] = useState({ data: [] });
 
   useEffect(() => {
-    fetch("http://elapteb8.beget.tech/api/users")
+    fetch("https://gasudev.ru/api/users")
       .then((resp) => resp.json())
       .then((data) => setUsers(data));
   }, []);
@@ -69,7 +67,7 @@ const UsersEditForm: React.FC = () => {
   });
 
   useEffect(() => {
-    fetch("http://elapteb8.beget.tech/api/users", {
+    fetch("https://gasudev.ru/api/users", {
       method: "GET",
     })
       .then((resp) => resp.json())

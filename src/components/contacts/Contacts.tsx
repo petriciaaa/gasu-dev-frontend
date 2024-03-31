@@ -5,8 +5,11 @@ import { Map, YMaps } from "@pbe/react-yandex-maps";
 import "./contacts.scss";
 
 import { ReactComponent as VkIcon } from "src/assets/svg/icons8-vk.svg";
+import { useScreenWidth } from "./../../hooks/screen";
 
 const Contacts = () => {
+  const width = useScreenWidth();
+
   return (
     <section className="contacts">
       <div className="contacts-wrapper">
@@ -47,7 +50,7 @@ const Contacts = () => {
           <div>
             Местоположение студсовета
             <Map
-              width={500}
+              width={width > 600 ? 500 : 320}
               defaultState={{
                 center: [59.915096640731554, 30.31459785681434],
                 zoom: 16,

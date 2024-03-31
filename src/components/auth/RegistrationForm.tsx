@@ -72,7 +72,7 @@ const RegistrationForm = (props: IPropsLoginForm) => {
       checkBoxInputRef.current.value === "on"
       // checkBoxInputRef.current.value === "on" -Надо смотреть выше
     ) {
-      const resp = await fetch("http://elapteb8.beget.tech/api/users", {
+      const resp = await fetch("https://gasudev.ru/api/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

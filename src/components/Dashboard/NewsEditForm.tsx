@@ -7,14 +7,12 @@ import "./news-edit.scss";
 
 //Do not forget to use useEffect hook!
 const NewsEditForm: React.FC = () => {
-  // const news = await fetch('http://localhost:8000/api/news', )
-
   const newsTitle = useRef(null);
   const newsContent = useRef(null);
   const deleteTitle = useRef(null);
 
   const addNews = (event) => {
-    fetch("http://elapteb8.beget.tech/api/news", {
+    fetch("https://gasudev.ru/api/news", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -29,7 +27,7 @@ const NewsEditForm: React.FC = () => {
   };
 
   const deleteNews = (event) => {
-    fetch("http://elapteb8.beget.tech/api/news/0", {
+    fetch("https://gasudev.ru/api/news/0", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

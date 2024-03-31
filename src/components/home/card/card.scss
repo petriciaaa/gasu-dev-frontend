@@ -5,6 +5,9 @@
   background: $grad;
   border: none;
   margin: 40px;
+  @media (max-width: 550px) {
+    padding-left: 0rem;
+  }
 }
 .card__info__wrapper {
   width: 66%;
@@ -23,6 +26,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-left: 0rem;
   }
   &__title {
     // font-family: "Open Sans ";
@@ -30,6 +34,10 @@
     font-weight: 700;
     @media (max-width: 900px) {
       font-size: 47px;
+    }
+    @media (max-width: 550px) {
+      font-size: 40px;
+      word-break: normal;
     }
   }
 
